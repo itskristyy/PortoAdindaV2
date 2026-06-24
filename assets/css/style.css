@@ -1,0 +1,207 @@
+:root {
+    /* Color System */
+    --primary: #70585b;
+    --primary-container: #fadadd;
+    --secondary: #576152;
+    --secondary-container: #dbe6d2;
+    --tertiary: #5e5e5c;
+    --tertiary-container: #e3e1dd;
+    --surface: #fcf9f3;
+    --surface-dim: #dcdad4;
+    --surface-bright: #fcf9f3;
+    --surface-container-low: #f6f3ed;
+    --surface-container: #f0eee8;
+    --surface-container-high: #eae8e2;
+    --surface-container-highest: #e5e2dc;
+    --on-surface: #1b1c18;
+    --on-surface-variant: #4f4445;
+    --outline: #807475;
+    --outline-variant: #d2c3c4;
+    --inverse-surface: #30312d;
+    --inverse-on-surface: #f3f0ea;
+    --inverse-primary: #debfc2;
+    --error: #ba1a1a;
+    --on-error: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    background-color: var(--surface);
+    color: var(--on-surface);
+}
+
+/* Custom Cursor */
+body {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="6" fill="%23705a5b" opacity="0.8"/><circle cx="16" cy="16" r="10" fill="none" stroke="%23705a5b" stroke-width="1.5" opacity="0.4"/></svg>') 16 16, auto;
+}
+
+a, button {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="8" fill="%23705a5b" opacity="0.9"/><path d="M16 10 L20 16 L16 20 L12 16 Z" fill="%23fadadd"/></svg>') 16 16, auto;
+}
+
+/* Glass Morphism */
+.glass-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(112, 88, 91, 0.1);
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(112, 88, 91, 0.2);
+    box-shadow: 0 20px 40px rgba(112, 88, 91, 0.1);
+}
+
+.glass-button {
+    background: rgba(252, 249, 243, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.glass-button:hover {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(112, 88, 91, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Typography */
+.font-serif {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.font-serif.italic {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.font-body-md {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-label-sm {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.03em;
+}
+
+.tracking-tight {
+    letter-spacing: -0.02em;
+}
+
+.tracking-widest {
+    letter-spacing: 0.1em;
+}
+
+/* Background Pattern */
+#bg-pattern {
+    background-image: 
+        linear-gradient(rgba(112, 88, 91, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(112, 88, 91, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    background-position: 0 0;
+    opacity: 0.5;
+}
+
+/* Animations */
+@keyframes float-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.animate-float-in {
+    animation: float-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    opacity: 0;
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    opacity: 0;
+}
+
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+.animate-pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Aurora Canvas Styling */
+#aurora-canvas {
+    display: block;
+    z-index: 10;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .font-serif {
+        font-size: 2.25rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .glass-card {
+        padding: 1rem;
+    }
+}
