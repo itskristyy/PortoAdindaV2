@@ -1044,7 +1044,7 @@ body{
 }
 .github-stats__heading{
   font-family: var(--font-serif);
-  font-size: 3px;
+  font-size: 30px;
   color: var(--color-on-surface);
   margin: 16px 0 20px;
 }
