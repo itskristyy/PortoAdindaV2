@@ -16,6 +16,11 @@
     font-size: 35px;
   }
 
+  .about__heading,
+  .tech__heading,
+  .exploring__heading,
+  .projects__heading,
+  .achievement__heading,
   .github-stats__heading {
     font-size: 48px;
   }
