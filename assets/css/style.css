@@ -615,7 +615,7 @@ body{
 .about__content-col{ order: 1; }
 .about__heading{
   font-family: var(--font-serif);
-  font-size: 48px;
+  font-size: 35px;
   color: var(--color-on-surface);
   margin: 0 0 40px;
 }
@@ -775,7 +775,7 @@ body{
 }
 .exploring__heading{
   font-family: var(--font-serif);
-  font-size: 48px;
+  font-size: 35px;
   color: var(--color-on-surface);
   margin: 0 0 24px;
 }
@@ -936,7 +936,7 @@ body{
 }
 .achievement__heading{
   font-family: var(--font-serif);
-  font-size: 48px;
+  font-size: 35px;
   color: var(--color-on-surface);
   margin: 0 0 48px;
 }
@@ -1044,7 +1044,7 @@ body{
 }
 .github-stats__heading{
   font-family: var(--font-serif);
-  font-size: 40px;
+  font-size: 3px;
   color: var(--color-on-surface);
   margin: 16px 0 20px;
 }
