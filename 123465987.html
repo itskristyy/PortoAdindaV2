@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adinda Kristiyani | Portfolio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Work+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    />
+
+    <!-- Favicon -->
+     <link rel="shortcut icon" href="assets\images\favicon.png" type="image/x-icon">
+
+    <!-- Boxicons for Social Sidebar -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+
+    <!-- Native CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive_style.css" />
+  </head>
+  <body>
+    <div class="grid-backdrop"></div>
+
+    <!-- Floating Pill Navigation -->
+    <header class="site-header">
+      <nav class="navbar glass-pill no-scrollbar">
+        <a href="#" class="navbar__logo">AK.</a>
+        <div class="navbar__links">
+          <a href="#home" class="navbar__link navbar__link--active">Home</a>
+          <a href="#about" class="navbar__link">About</a>
+          <a href="#tech" class="navbar__link">Skills</a>
+          <a href="#projects" class="navbar__link">Projects</a>
+          <a href="#achievement" class="navbar__link">Achievement</a>
+          <a href="#github-stats" class="navbar__link">GitHub</a>
+        </div>
+        <div class="navbar__actions">
+          <button
+            type="button"
+            class="theme-toggle"
+            id="themeToggle"
+            role="switch"
+            aria-checked="false"
+            aria-label="Ganti tema terang/gelap"
+          >
+          <button type="button" class="lang-toggle" id="langToggle" aria-label="Toggle language">
+  <span class="lang-toggle__text">EN</span>
+</button>
+            <span class="theme-toggle__track">
+              <span class="theme-toggle__thumb">
+                <span class="material-symbols-outlined" id="themeToggleIcon"
+                  >light_mode</span
+                >
+              </span>
+            </span>
+            <span class="theme-toggle__label" id="themeToggleLabel">Light</span>
+          </button>
+          <button
+            type="button"
+            class="navbar__hamburger"
+            id="mobileMenuBtn"
+            aria-expanded="false"
+            aria-controls="mobileNav"
+            aria-label="Buka menu navigasi"
+          >
+            <span class="navbar__hamburger-lines"
+              ><span></span><span></span><span></span
+            ></span>
+          </button>
+          <a href="#contact" class="btn-connect">
+            Connect
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav" id="mobileNav">
+      <div class="mobile-nav__backdrop" id="mobileNavBackdrop"></div>
+      <div class="mobile-nav__panel glass-card">
+        <button
+          type="button"
+          class="mobile-nav__close"
+          id="mobileNavClose"
+          aria-label="Tutup menu navigasi"
+        >
+          <span class="material-symbols-outlined">close</span>
+        </button>
+        <a href="#home" class="mobile-nav__link">Home</a>
+        <a href="#about" class="mobile-nav__link">About</a>
+        <a href="#tech" class="mobile-nav__link">Skills</a>
+        <a href="#projects" class="mobile-nav__link">Projects</a>
+        <a href="#achievement" class="mobile-nav__link">Achievement</a>
+        <a href="#github-stats" class="mobile-nav__link">GitHub</a>
+        <a href="#contact" class="btn-connect mobile-nav__connect">
+          Connect
+          <span class="material-symbols-outlined">arrow_forward_ios</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="cursor-aurora" id="cursorAurora" aria-hidden="true"></div>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="home">
+        <aside class="hero__social">
+          <div class="hero__social-links">
+            <a href="https://github.com/itskristyy"><i class="bx bxl-github"></i></a>
+            <a href="https://www.instagram.com/kristyyvy"><i class="bx bxl-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/adindakristyani"><i class="bx bxl-linkedin"></i></a>
+            <a href="mailto:adinda.kristyy1903@gmail.com""
+              ><i class="bx bx-envelope"></i
+            ></a>
+          </div>
+          <div class="hero__social-divider"></div>
+          <span class="hero__available-text"
+            >Available for new projects //</span
+          >
+        </aside>
+
+        <div class="hero__content scroll-reveal">
+          <h1 class="hero__title">Adinda Kristiyani</h1>
+
+          <div class="hero__subtitle-wrap">
+            <div class="hero__subtitle-rule"></div>
+            <p class="hero__subtitle">Web Development Enthusiast</p>
+          </div>
+
+          <p class="hero__description">
+            Building digital experiences through clean design, responsive
+            interfaces, and continuous learning. Passionate about transforming
+            ideas into functional and user-friendly websites.
+          </p>
+
+          <div class="hero__info-grid">
+            <div class="info-card glass-card">
+              <p class="info-card__label">Based In</p>
+              <p class="info-card__value">Kendal, Indonesia</p>
+            </div>
+            <div class="info-card glass-card">
+              <p class="info-card__label">Building</p>
+              <p class="info-card__value">Responsive Websites</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__scroll-indicator">
+          <span class="hero__scroll-track">
+            <span class="hero__scroll-glow"></span>
+          </span>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about" id="about">
+        <div class="about__grid">
+          <!-- Portrait Image -->
+          <div class="about__image-col scroll-reveal">
+            <div class="about__image-wrap">
+              <div class="about__image-glow"></div>
+              <div class="about__image-frame">
+                <img
+                  class="about__image"
+                  src="assets/images/me1.jpeg"
+                  alt="Adinda Kristiyani Portrait"
+                />
+                <div class="about__image-overlay"></div>
+              </div>
+              <div class="about__badge glass-card floating">
+                <div class="about__badge-number">4</div>
+                <div class="about__badge-label">Main<br />Project</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__content-col scroll-reveal stagger-1">
+            <h2 class="about__heading">Getting to Know Me</h2>
+            <p class="about__text"> 
+              Hi, I'm Adinda Kristiyani, a Software Engineering student at SMK
+              Negeri 4 Kendal with a growing interest in web development and
+              digital creativity.
+            </p>
+            <p class="about__text">
+              I enjoy building responsive websites, learning new technologies,
+              and improving my problem-solving skills through personal and
+              school projects. My goal is to continue growing as a developer
+              while gaining real-world experience through internships and
+              collaborative projects.
+            </p>
+            <p class="about__text">
+              Currently, I'm focusing on strengthening my frontend development
+              skills and exploring modern web technologies.
+            </p>
+
+            <div class="about__info-grid">
+              <div class="about__info-card glass-card">
+                <span class="material-symbols-outlined">school</span>
+                <p class="about__info-label">Education</p>
+                <p class="about__info-value">
+                  SMK Negeri 4 Kendal — Software Engineering (PPLG)
+                </p>
+              </div>
+              <div class="about__info-card glass-card">
+                <span class="material-symbols-outlined">location_on</span>
+                <p class="about__info-label">Location</p>
+                <p class="about__info-value">Kendal, Central Java, Indonesia</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tech Stack Section -->
+      <section class="tech" id="tech">
+        <div class="tech__inner">
+          <div class="tech__header scroll-reveal">
+            <div class="tech__header-copy">
+              <span class="tech__eyebrow">Capabilities</span>
+              <h2 class="tech__heading">Crafting Tools</h2>
+              <p class="tech__desc">
+                My digital arsenal for building modern web applications with
+                precision and proficiency.
+              </p>
+            </div>
+          </div>
+
+          <div class="tech__layout">
+            <div class="skill-bars scroll-reveal stagger-1">
+              <div class="skill-bar">
+                <div class="skill-bar__head">
+                  <span>HTML</span><span>15%</span>
+                </div>
+                <div class="skill-bar__track">
+                  <div class="skill-bar__fill" data-width="15"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar__head">
+                  <span>CSS</span><span>15%</span>
+                </div>
+                <div class="skill-bar__track">
+                  <div class="skill-bar__fill" data-width="15"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar__head">
+                  <span>PHP</span><span>5%</span>
+                </div>
+                <div class="skill-bar__track">
+                  <div class="skill-bar__fill" data-width="5"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar__head">
+                  <span>MySQL</span><span>10%</span>
+                </div>
+                <div class="skill-bar__track">
+                  <div class="skill-bar__fill" data-width="10"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar__head">
+                  <span>Canva</span><span>20%</span>
+                </div>
+                <div class="skill-bar__track">
+                  <div class="skill-bar__fill" data-width="20"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tool-card glass-card scroll-reveal stagger-2">
+              <div class="tool-card__inner">
+                <h3 class="tool-card__title">Tools</h3>
+                <div class="focus-tags">
+                  <span class="tag-chip">GitHub</span>
+                  <span class="tag-chip">VS Code</span>
+                  <span class="tag-chip">Laragon</span>
+                  <span class="tag-chip">NetBeans</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Currently Learning Section -->
+      <section class="exploring" id="exploring">
+        <div class="exploring__inner scroll-reveal">
+          <h2 class="exploring__heading">Currently Learning</h2>
+          <p class="exploring__desc">
+            Technologies and skills I am currently diving deep into to stay
+            ahead in the digital landscape.
+          </p>
+
+          <div class="exploring__grid">
+            <div class="explore-card glass-card">
+              <div class="explore-card__number">01</div>
+              <h3 class="explore-card__title">JavaScript</h3>
+              <p class="explore-card__desc">
+                Learning DOM manipulation and interactive web development.
+              </p>
+            </div>
+            <div class="explore-card glass-card">
+              <div class="explore-card__number">02</div>
+              <h3 class="explore-card__title">Responsive Web Design</h3>
+              <p class="explore-card__desc">
+                Creating layouts that work across different screen sizes and
+                devices.
+              </p>
+            </div>
+            <div class="explore-card glass-card">
+              <div class="explore-card__number">03</div>
+              <h3 class="explore-card__title">PHP</h3>
+              <p class="explore-card__desc">
+                Strengthening my PHP skills for backend logic and dynamic web
+                development.
+              </p>
+            </div>
+            <div class="explore-card glass-card">
+              <div class="explore-card__number">04</div>
+              <h3 class="explore-card__title">Tailwind CSS</h3>
+              <p class="explore-card__desc">
+                Learning utility-first CSS for modern website development.
+              </p>
+            </div>
+            <div class="explore-card glass-card">
+              <div class="explore-card__number">05</div>
+              <h3 class="explore-card__title">React.js</h3>
+              <p class="explore-card__desc">
+                Understanding component-based frontend development and reusable
+                UI design.
+              </p>
+            </div>
+            <div class="explore-card glass-card">
+              <div class="explore-card__number">06</div>
+              <h3 class="explore-card__title">Git &amp; GitHub Workflow</h3>
+              <p class="explore-card__desc">
+                Improving version control and project management practices.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="projects" id="projects">
+        <div class="projects__inner">
+          <h2 class="projects__heading scroll-reveal">Selected Works</h2>
+
+          <div class="projects__grid">
+            <div class="project-card scroll-reveal">
+              <div class="project-card__media">
+                <img
+                  class="project-card__img"
+                  src="https://www.shutterstock.com/image-vector/image-coming-soon-no-picture-260nw-2450891047.jpg  "
+                  alt="POS Warehouse System project"
+                />
+              </div>
+              <h3 class="project-card__title">POS Warehouse System</h3>
+              <p class="project-card__desc">
+                A warehouse management application designed to handle inventory
+                tracking, stock monitoring, and product management efficiently.
+              </p>
+              <p class="project-card__stack">PHP • MySQL • Bootstrap</p>
+              <div class="project-card__links">
+                <a href="https://github.com/itskristyy/PointOfSale_KristyCrumbs" class="project-card__link">GitHub <span>↗</span></a>
+              </div>
+            </div>
+
+            <div class="project-card scroll-reveal stagger-1">
+              <div class="project-card__media">
+                <img
+                  class="project-card__img"
+                  src="https://www.shutterstock.com/image-vector/image-coming-soon-no-picture-260nw-2450891047.jpg  "
+                  alt="Desktop Cashier Application project"
+                />
+              </div>
+              <h3 class="project-card__title">Desktop Cashier Application</h3>
+              <p class="project-card__desc">
+                A desktop-based cashier system developed to manage transactions,
+                sales records, and daily business operations.
+              </p>
+              <p class="project-card__stack">Java • NetBeans</p>
+              <div class="project-card__links">
+                <a href="https://github.com/itskristyy/bites-cli" class="project-card__link">GitHub <span>↗</span></a>
+              </div>
+            </div>
+
+            <div class="project-card scroll-reveal stagger-2">
+              <div class="project-card__media">
+                <img
+                  class="project-card__img"
+                  src="https://www.shutterstock.com/image-vector/image-coming-soon-no-picture-260nw-2450891047.jpg  "
+                  alt="Library Management Website project"
+                />
+              </div>
+              <h3 class="project-card__title">Library Management Website</h3>
+              <p class="project-card__desc">
+                A CRUD-based web application for managing books, borrowers, and
+                library records through an organized database system.
+              </p>
+              <p class="project-card__stack">PHP • MySQL</p>
+              <div class="project-card__links">
+                <a href="#" class="project-card__link">GitHub <span>↗</span></a>
+                
+              </div>
+            </div>
+
+            <div class="project-card scroll-reveal">
+              <div class="project-card__media">
+                <img
+                  class="project-card__img"
+                  src="https://www.shutterstock.com/image-vector/image-coming-soon-no-picture-260nw-2450891047.jpg  "
+                  alt="Authentication System project"
+                />
+              </div>
+              <h3 class="project-card__title">Authentication System</h3>
+              <p class="project-card__desc">
+                A user authentication project featuring login, registration, and
+                session management functionality.
+              </p>
+              <p class="project-card__stack">PHP • MySQL</p>
+              <div class="project-card__links">
+                <a href="#" class="project-card__link">GitHub <span>↗</span></a>
+              </div>
+            </div>
+
+            <div class="project-card scroll-reveal stagger-1">
+              <div class="project-card__media">
+                <img
+                  class="project-card__img"
+                  src="https://www.shutterstock.com/image-vector/image-coming-soon-no-picture-260nw-2450891047.jpg  "
+                  alt="E-Commerce UI Design project"
+                />
+              </div>
+              <h3 class="project-card__title">E-Commerce UI Design</h3>
+              <p class="project-card__desc">
+                A responsive online store interface focused on layout structure,
+                usability, and visual presentation.
+              </p>
+              <p class="project-card__stack">HTML • CSS • Bootstrap</p>
+              <div class="project-card__links">
+                <a href="https://github.com/itskristyy/OurFlower" class="project-card__link">GitHub <span>↗</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Achievement Section -->
+      <section class="achievement" id="achievement">
+        <div class="achievement__inner scroll-reveal">
+          <span class="material-symbols-outlined achievement__icon"
+            >emoji_events</span
+          >
+          <h2 class="achievement__heading">Notable Achievement</h2>
+
+          <div class="achievement__panel glass-card">
+            <div class="achievement__panel-rule"></div>
+            <p class="achievement__eyebrow">Tutor Sebaya Event • 2026</p>
+            <h3 class="achievement__title">
+              3rd Place — Banner &amp; Promotional Poster Design Competition
+            </h3>
+            <p class="achievement__desc">
+              Designed promotional media and banner concepts that earned third
+              place in a school-level creative design competition.
+            </p>
+            <a
+              href="assets/certificates/tutor-sebaya-2026.jpg"
+              target="_blank"
+              rel="noopener"
+              class="achievement__cert-link"
+            >
+              <span class="material-symbols-outlined">description</span>
+              View Certificate
+            </a>
+          </div>
+
+          <div class="cert-grid">
+            <div class="cert-box">
+              <span class="material-symbols-outlined">workspace_premium</span>
+              <p class="cert-box__label">Coming Soon</p>
+            </div>
+            <div class="cert-box">
+              <span class="material-symbols-outlined">workspace_premium</span>
+              <p class="cert-box__label">Coming Soon</p>
+            </div>
+            <div class="cert-box">
+              <span class="material-symbols-outlined">workspace_premium</span>
+              <p class="cert-box__label">Coming Soon</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GitHub Stats Section -->
+      <div class="github-stats">
+        <div class="github-stats__inner scroll-reveal">
+          <div class="github-stats__intro">
+            <span class="tech__eyebrow">GitHub</span>
+            <h2 class="github-stats__heading">My Development Journey</h2>
+            <p class="github-stats__desc">
+              A collection of personal projects, learning repositories, and
+              development experiments documenting my growth as a web development
+              enthusiast.
+            </p>
+          </div>
+
+          <div class="github-stats__divider">
+            <div class="github-stats__divider-line"></div>
+            <span class="github-stats__label">GitHub Footprint</span>
+            <div class="github-stats__divider-line"></div>
+          </div>
+
+          <div class="github-stats__grid">
+            <div class="stat-card glass-card">
+              <p class="stat-card__value">6</p>
+              <p class="stat-card__label">Repositories</p>
+            </div>
+            <div class="stat-card glass-card">
+              <p class="stat-card__value">3</p>
+              <p class="stat-card__label">Followers</p>
+            </div>
+            <div class="stat-card glass-card">
+              <p class="stat-card__value">3</p>
+              <p class="stat-card__label">Following</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Section -->
+      <section class="contact" id="contact">
+        <div class="contact__grid">
+          <div class="scroll-reveal">
+            <span class="contact__eyebrow">Get in Touch</span>
+            <h2 class="contact__heading">Let's Connect</h2>
+            <p class="contact__desc">
+              I'm open to internship opportunities, collaborations, and
+              conversations about web development and technology.
+            </p>
+
+            <div class="contact__items">
+              <!-- Email -->
+              <a href="mailto:adinda.kristyy1903@gmail.com">
+                <div class="contact__item">
+                  <div class="contact__item-icon">
+                  <span class="material-symbols-outlined">alternate_email</span>
+                </div>
+                <div>
+                  <p class="contact__item-label">Email</p>
+                  <p class="contact__item-value">adinda.kristyy1903@gmail.com</p>
+                </div>
+              </div>
+            </a>
+
+              <!-- Github -->
+              <a href="https://github.com/itskristyy">
+                <div class="contact__item">
+                <div class="contact__item-icon">
+                  <i class="bx bxl-github"></i>
+                </div>
+                <div>
+                  <p class="contact__item-label">GitHub</p>
+                  <p class="contact__item-value">github.com/itskristyy</p>
+                </div>
+              </div>
+              </a>
+
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/kristyyvy">
+                <div class="contact__item">
+                <div class="contact__item-icon">
+                  <i class="bx bxl-instagram"></i>
+                </div>
+                <div>
+                  <p class="contact__item-label">Instagram</p>
+                  <p class="contact__item-value">@kristyyadinda_</p>
+                </div>
+              </div>
+              </a>
+
+              <!-- Linkedin -->
+              <a href="https://www.linkedin.com/in/adindakristyani">
+                <div class="contact__item">
+                <div class="contact__item-icon">
+                  <i class="bx bxl-linkedin"></i>
+                </div>
+                <div>
+                  <p class="contact__item-label">Linkedin</p>
+                  <p class="contact__item-value">Adinda Kristyani</p>
+                </div>
+              </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <a href="#" class="site-footer__logo">AK.</a>
+        <nav class="site-footer__nav">
+          <a href="#about" class="site-footer__nav-link">About</a>
+          <a href="#tech" class="site-footer__nav-link">Skills</a>
+          <a href="#projects" class="site-footer__nav-link">Work</a>
+          <a href="#contact" class="site-footer__nav-link">Contact</a>
+        </nav>
+        <div class="site-footer__socials">
+          <a href="https://github.com/itskristyy" class="site-footer__social"
+            ><i class="bx bxl-github"></i
+          ></a>
+          <a href="https://www.instagram.com/kristyyvy" class="site-footer__social"
+            ><i class="bx bxl-instagram"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/adindakristyani" class="site-footer__social"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+        </div>
+        <div class="site-footer__copy">
+          <p class="site-footer__copy-text">© 2026 Adinda Kristiyani</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/aurora.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
