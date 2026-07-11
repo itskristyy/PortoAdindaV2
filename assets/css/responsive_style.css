@@ -1,0 +1,146 @@
+/* Mobile only (<768px): hide portrait photo, show hamburger, compact toggle */
+
+/* Mobile (<768px): Tampilkan hamburger, sembunyikan foto portrait */
+@media (max-width: 767.98px) {
+  .about__image-col {
+    display: none;
+  }
+  .hero {
+    padding-top: 140px;
+  }
+}
+
+/* Handphone / Tablet  ke atas (≥ 768px) */
+@media (min-width: 768px) {
+  .project-card__title {
+    font-size: 35px;
+  }
+
+  .about__heading,
+  .tech__heading,
+  .exploring__heading,
+  .projects__heading,
+  .achievement__heading,
+  .github-stats__heading {
+    font-size: 48px;
+  }
+
+  .site-header {
+    padding-inline: var(--space-margin-desktop);
+  }
+  .navbar__links {
+    display: flex;
+  }
+  .navbar__hamburger {
+    display: none;
+  }
+  .theme-toggle__label {
+    display: inline;
+  }
+  .hero {
+    padding-inline: var(--space-margin-desktop);
+  }
+  .hero__title {
+    margin-top: 40px;
+    font-size: 96px;
+  }
+  .about {
+    padding-inline: var(--space-margin-desktop);
+  }
+  .about__info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .tech {
+    padding-inline: var(--space-margin-desktop);
+  }
+  .tech__header {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .tech__layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .skill-bars {
+    max-width: 460px;
+  }
+  .tool-card {
+    flex: 1;
+  }
+  .exploring {
+    padding-inline: var(--space-margin-desktop);
+  }
+  .exploring__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects {
+    padding-inline: var(--space-margin-desktop);
+  }
+  .projects__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .achievement {
+    padding-inline: var(--space-margin-desktop);
+  }
+  .cert-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .github-stats {
+    padding-inline: var(--space-margin-desktop);
+  }
+  .github-stats__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .contact {
+    padding-inline: var(--space-margin-desktop);
+  }
+  .contact__heading {
+    font-size: 60px;
+    margin: 0 0 40px;
+  }
+  .contact__desc {
+    font-size: 20px;
+    margin: 0 0 56px;
+  }
+  .contact__items {
+    gap: 40px;
+  }
+  .contact__item {
+    gap: 32px;
+  }
+  .contact__item-value {
+    font-size: 20px;
+  }
+  .site-footer__nav-link {
+    font-size: 14px;
+  }
+}
+
+/* Laptop ke atas (≥ 1024px) */
+@media (min-width: 1024px) {
+  .about__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about__image-col {
+    order: 1;
+  }
+  .about__content-col {
+    order: 2;
+  }
+  .exploring__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .projects__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .contact__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Desktop ke atas (≥ 1280px) */
+@media (min-width: 1280px) {
+  .hero__social {
+    display: flex;
+  }
+}
