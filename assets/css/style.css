@@ -420,25 +420,7 @@ body {
   color: var(--color-secondary);
   display: none;
 }
-<<<<<<< HEAD
-.lang-toggle{
-  background: var(--toggle-track-bg);
-  border: 1px solid var(--toggle-track-border);
-  padding: 4px 12px;
-  border-radius: var(--radius-full);
-  font-size: 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .15em;
-  color: var(--color-secondary);
-  cursor: pointer;
-  transition: all .3s ease;
-}
-.lang-toggle:hover{ opacity: .7; }
-.btn-connect{
-=======
 .btn-connect {
->>>>>>> 08b12b084ff5650e02e1784275568ca32dcde79e
   background-color: var(--color-primary);
   color: var(--color-on-primary);
   padding: 8px 20px;
