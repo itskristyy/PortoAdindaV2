@@ -80,50 +80,65 @@ function getLastNMonths(contributions, months) {
 }
 
 function buildHeatmapGrid(contributions) {
-  // Group by week columns (7 rows = days of week, columns = weeks)
-  // We want the most recent data on the right
-  const sorted = [...contributions].sort((a, b) => new Date(a.date) - new Date(b.date));
+  // Build a date-lookup map for fast access
+  const contribMap = {};
+  for (const c of contributions) {
+    contribMap[c.date] = c;
+  }
 
+  // Determine the date range: from the first contribution to today
+  const sorted = [...contributions].sort((a, b) => new Date(a.date) - new Date(b.date));
   if (sorted.length === 0) return { weeks: [], monthLabels: [] };
 
-  // Build week columns
+  const firstDate = new Date(sorted[0].date);
+  const today = new Date();
+
+  // Start from the Sunday of the first contribution's week
+  const gridStart = new Date(firstDate);
+  gridStart.setDate(gridStart.getDate() - gridStart.getDay());
+
+  // End at the Saturday of the current week
+  const gridEnd = new Date(today);
+  gridEnd.setDate(gridEnd.getDate() + (6 - gridEnd.getDay()));
+
+  // Helper to format date as YYYY-MM-DD
+  function fmtDate(d) {
+    const y = d.getFullYear();
+    const m = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    return `${y}-${m}-${day}`;
+  }
+
   const weeks = [];
-  let currentWeek = [];
-  let firstDate = new Date(sorted[0].date);
-  let startDow = firstDate.getDay(); // 0=Sun
-
-  // Pad the first week with empty cells
-  for (let i = 0; i < startDow; i++) {
-    currentWeek.push(null);
-  }
-
-  for (const entry of sorted) {
-    currentWeek.push(entry);
-    if (currentWeek.length === 7) {
-      weeks.push(currentWeek);
-      currentWeek = [];
-    }
-  }
-  if (currentWeek.length > 0) {
-    weeks.push(currentWeek);
-  }
-
-  // Build month labels (which weeks start a new month)
   const monthLabels = [];
   let lastMonth = -1;
-  for (let wi = 0; wi < weeks.length; wi++) {
-    for (const cell of weeks[wi]) {
-      if (cell) {
-        const d = new Date(cell.date);
-        const m = d.getMonth();
-        if (m !== lastMonth) {
-          monthLabels.push({ weekIndex: wi, label: getMonthLabel(cell.date) });
-          lastMonth = m;
-          break;
+  let cursor = new Date(gridStart);
+
+  while (cursor <= gridEnd) {
+    const week = [];
+    let weekMonthLabel = null;
+    for (let d = 0; d < 7; d++) {
+      const dateStr = fmtDate(cursor);
+      const entry = contribMap[dateStr] || null;
+      week.push(entry);
+
+      // Detect month transition on any day of the week
+      const m = cursor.getMonth();
+      if (m !== lastMonth) {
+        // Place the label at this week's column index
+        if (!weekMonthLabel) {
+          const months = ["Jan","Feb","Mar","Apr","May","Jun",
+                          "Jul","Aug","Sep","Oct","Nov","Dec"];
+          weekMonthLabel = { weekIndex: weeks.length, label: months[m].toUpperCase() };
         }
-        break;
+        lastMonth = m;
       }
+      cursor.setDate(cursor.getDate() + 1);
     }
+    if (weekMonthLabel) {
+      monthLabels.push(weekMonthLabel);
+    }
+    weeks.push(week);
   }
 
   return { weeks, monthLabels };
@@ -153,14 +168,20 @@ function renderContributionGraph(contributions) {
   // Month labels row
   const monthRow = document.createElement("div");
   monthRow.className = "contrib-months";
-  // We need to position month labels above the correct week columns
+  // Calculate grid dimensions dynamically based on container width
   const totalWeeks = weeks.length;
+  const cellGap = 3;
+  const containerWidth = container.clientWidth;
+  // Calculate cell size to fill the container
+  const cellSize = Math.floor((containerWidth - (totalWeeks - 1) * cellGap) / totalWeeks);
+  const colWidth = cellSize + cellGap;
+
   for (const ml of monthLabels) {
     const span = document.createElement("span");
     span.className = "contrib-month-label";
     span.textContent = ml.label;
-    // Position as percentage
-    const pct = (ml.weekIndex / Math.max(totalWeeks - 1, 1)) * 100;
+    // Position label at the exact pixel offset of the week column
+    const pct = (ml.weekIndex / totalWeeks) * 100;
     span.style.left = `${pct}%`;
     monthRow.appendChild(span);
   }
