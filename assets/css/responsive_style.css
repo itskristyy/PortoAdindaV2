@@ -136,6 +136,9 @@
   .contact__grid {
     grid-template-columns: 1fr 1fr;
   }
+  .github-stats__panels {
+    grid-template-columns: 1.3fr 1fr;
+  }
 }
 
 /* Desktop ke atas (≥ 1280px) */
