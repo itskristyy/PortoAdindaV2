@@ -536,6 +536,23 @@
               <p class="stat-card__label">Following</p>
             </div>
           </div>
+
+          <!-- Contribution Graph + Recent Repositories -->
+          <div class="github-stats__panels">
+            <!-- Kotak sebelah kiri: diisi otomatis oleh github-contributions.js -->
+            <div class="contrib-card glass-card">
+              <p class="contrib-card__count" id="contrib-count">Loading contributions...</p>
+              <div class="contrib-graph" id="contrib-graph"></div>
+            </div>
+
+            <!-- Kotak sebelah kanan: perlu logic baru (belum ada di file kamu) -->
+            <div class="recent-repos glass-card">
+              <p class="recent-repos__title">Recent Repositories</p>
+              <div class="recent-repos__list" id="recent-repos-list">
+                <p class="recent-repos__loading">Loading repositories...</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -640,5 +657,6 @@
     <script src="assets/js/aurora.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/github-stats.js"></script>
+    <script src="assets/js/github-contributions.js"></script>
   </body>
 </html>
